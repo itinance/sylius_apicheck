@@ -23,7 +23,7 @@ echo "Access-Token: $accessToken\nTokenType: $tokenType\n\n";
 // 2. api call with access token
 
 $cmd = <<<CMD
-curl -sS http://localhost:8000/api/users -H "Accept: application/json" -H "Authorization: $tokenType $accessToken"
+curl -sS http://localhost:8000/api/users -H "Accept: application/json" -H "Authorization: $tokenType $accessToken" -L
 CMD;
 
 $result = shell_exec($cmd);
